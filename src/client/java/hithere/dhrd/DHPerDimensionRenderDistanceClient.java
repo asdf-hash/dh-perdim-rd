@@ -36,7 +36,7 @@ public class DHPerDimensionRenderDistanceClient implements ClientModInitializer 
     }
 
     private void onDimensionChanged(String newDimension) {        
-        // Look up the new dimension in our config map. If it doesn't exist, use the default.
+        // Look up the new dimension in the config map. If it doesn't exist, use the default.
         int newRenderDistance = config.dimensionRenderDistances.getOrDefault(newDimension, config.defaultRenderDistance);
 
         applyDHRenderDistance(newRenderDistance);
