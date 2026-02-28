@@ -29,8 +29,8 @@ public class DHRDConfig {
         dimensionRenderDistances.put("minecraft:the_end", 1024);
     }
 
-    /**
-     * Loads the config from disk, or creates a new one if it doesn't exist.
+    /*
+     Loads the config from disk, or creates a new one if it doesn't exist.
      */
     public static DHRDConfig load() {
         if (CONFIG_FILE.exists()) {
@@ -48,8 +48,8 @@ public class DHRDConfig {
         return config;
     }
 
-    /**
-     * Saves the current config to disk.
+    /*
+     Saves the current config to disk.
      */
     public void save() {
         try (FileWriter writer = new FileWriter(CONFIG_FILE)) {
@@ -59,4 +59,5 @@ public class DHRDConfig {
             e.printStackTrace();
         }
     }
+
 }
